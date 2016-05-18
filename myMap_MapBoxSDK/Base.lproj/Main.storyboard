@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Delegate-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="myMap_MapBoxSDK" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QJD-je-q36" customClass="MGLMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ocb-zN-qCR"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-hs-JeK">
+                                <rect key="frame" x="0.0" y="559" width="600" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="1VG-ww-cyF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dqd-hs-JeK" firstAttribute="top" secondItem="QJD-je-q36" secondAttribute="bottom" constant="8" symbolic="YES" id="4Qu-1I-PI7"/>
+                            <constraint firstItem="QJD-je-q36" firstAttribute="leading" secondItem="dqd-hs-JeK" secondAttribute="leading" id="5jb-7R-mTB"/>
+                            <constraint firstItem="QJD-je-q36" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ic2-72-mE1"/>
+                            <constraint firstItem="QJD-je-q36" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tj9-wD-NTh"/>
+                            <constraint firstItem="dqd-hs-JeK" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="bHV-cY-2at"/>
+                            <constraint firstAttribute="trailing" secondItem="QJD-je-q36" secondAttribute="trailing" id="pVC-8V-2Iv"/>
+                            <constraint firstItem="QJD-je-q36" firstAttribute="trailing" secondItem="dqd-hs-JeK" secondAttribute="trailing" id="zGX-N6-GFz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="QJD-je-q36" id="kws-ox-45Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="380" y="349"/>
+        </scene>
+    </scenes>
+</document>
