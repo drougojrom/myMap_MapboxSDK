@@ -8,11 +8,15 @@
 
 import UIKit
 import Mapbox
+import MapboxGeocoder
+import MapboxDirections
 
 class MapViewController: UIViewController {
 
     @IBOutlet var mapView: MGLMapView!
     
+    var arrayHelper = [String]()
+    let geocoder = MBGeocoder(accessToken: "pk.eyJ1IjoiZHJvdWdvanJvbSIsImEiOiJjaW9janJkazcwMDV0dmptNWsxczRocTl0In0.w4hQl8U5yQdOqstMG5z6Xg")
     
     
     override func viewDidLoad() {
@@ -23,6 +27,16 @@ class MapViewController: UIViewController {
         point.title = "Большой театр"
         point.subtitle = "Москва, Россия"
         
+        let task = geocoder.geocodeAddressString(arrayHelper.first!, completionHandler: { (placemarks, error) in
+        
+            
+            placemarks?.count
+            let addressPlacemark = placemarks![0]
+            print(addressPlacemark)
+            print(placemarks)
+        })
+        
+        print(task)
         mapView.addAnnotation(point)
         
     }

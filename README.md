@@ -1,1 +1,0 @@
-# myMap_MapboxSDK

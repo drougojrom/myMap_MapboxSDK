@@ -3,12 +3,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Choose Location View Controller-->
         <scene sceneID="SnV-Iw-vCK">
             <objects>
-                <viewController id="shP-7y-fB9" sceneMemberID="viewController">
+                <viewController id="shP-7y-fB9" customClass="ChooseLocationViewController" customModule="myMap_MapBoxSDK" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="3c9-ux-pv2"/>
                         <viewControllerLayoutGuide type="bottom" id="kqL-db-Qjb"/>
@@ -17,34 +18,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvL-jX-eOM">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Start location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cvL-jX-eOM">
                                 <rect key="frame" x="20" y="41" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Finish location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-jb-Vam">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Finish location" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w4q-jb-Vam">
                                 <rect key="frame" x="20" y="79" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFK-Gs-lxJ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hFK-Gs-lxJ">
                                 <rect key="frame" x="247" y="117" width="107" height="30"/>
                                 <state key="normal" title="Enter Locations"/>
+                                <connections>
+                                    <action selector="addressEntered:" destination="shP-7y-fB9" eventType="touchUpInside" id="hJE-6U-cBN"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb9-ZH-qtB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb9-ZH-qtB">
                                 <rect key="frame" x="285" y="152" width="30" height="30"/>
                                 <state key="normal" title="go!"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowMapView" id="QRU-n4-EwN"/>
+                                    <action selector="getDirections:" destination="shP-7y-fB9" eventType="touchUpInside" id="fng-W0-nIh"/>
+                                    <segue destination="8dz-53-fEW" kind="show" identifier="ShowLocation" id="QRU-n4-EwN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-mX-D4d">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LMn-mX-D4d">
                                 <rect key="frame" x="247" y="190" width="107" height="30"/>
                                 <state key="normal" title="Clear Locations"/>
+                                <connections>
+                                    <action selector="clearLocations:" destination="shP-7y-fB9" eventType="touchUpInside" id="tfO-SU-zwn"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xb9-ZH-qtB" firstAttribute="top" secondItem="hFK-Gs-lxJ" secondAttribute="bottom" constant="5" id="0On-wM-auq"/>
+                            <constraint firstItem="cvL-jX-eOM" firstAttribute="leading" secondItem="Wjc-Xg-YHl" secondAttribute="leadingMargin" id="3mK-pD-IjB"/>
+                            <constraint firstItem="cvL-jX-eOM" firstAttribute="trailing" secondItem="w4q-jb-Vam" secondAttribute="trailing" id="EGx-6O-OlX"/>
+                            <constraint firstItem="LMn-mX-D4d" firstAttribute="top" secondItem="xb9-ZH-qtB" secondAttribute="bottom" constant="8" symbolic="YES" id="Fcb-6y-Fp9"/>
+                            <constraint firstItem="cvL-jX-eOM" firstAttribute="leading" secondItem="w4q-jb-Vam" secondAttribute="leading" id="Gmq-ib-3TI"/>
+                            <constraint firstItem="cvL-jX-eOM" firstAttribute="trailing" secondItem="Wjc-Xg-YHl" secondAttribute="trailingMargin" id="JUC-uY-J1e"/>
+                            <constraint firstItem="hFK-Gs-lxJ" firstAttribute="centerX" secondItem="xb9-ZH-qtB" secondAttribute="centerX" id="Nq7-kc-hjR"/>
+                            <constraint firstItem="w4q-jb-Vam" firstAttribute="centerX" secondItem="hFK-Gs-lxJ" secondAttribute="centerX" id="SwV-Nc-knH"/>
+                            <constraint firstItem="cvL-jX-eOM" firstAttribute="top" secondItem="3c9-ux-pv2" secondAttribute="bottom" constant="21" id="UfP-65-3Jj"/>
+                            <constraint firstItem="w4q-jb-Vam" firstAttribute="top" secondItem="cvL-jX-eOM" secondAttribute="bottom" constant="8" symbolic="YES" id="azk-bn-gTx"/>
+                            <constraint firstItem="hFK-Gs-lxJ" firstAttribute="leading" secondItem="LMn-mX-D4d" secondAttribute="leading" id="azp-o0-ZWh"/>
+                            <constraint firstItem="hFK-Gs-lxJ" firstAttribute="top" secondItem="w4q-jb-Vam" secondAttribute="bottom" constant="8" symbolic="YES" id="mrK-B6-Mys"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="finishLocationFiled" destination="w4q-jb-Vam" id="qze-za-a8r"/>
+                        <outlet property="goButton" destination="xb9-ZH-qtB" id="Ygy-jQ-k8e"/>
+                        <outlet property="startLocationField" destination="cvL-jX-eOM" id="ul0-Nh-c1f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sG4-v3-pAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -67,6 +94,15 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="latitude">
+                                        <real key="value" value="55.760278"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="longitude">
+                                        <real key="value" value="37.618611000000001"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
+                                        <real key="value" value="14"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ocb-zN-qCR"/>
@@ -93,11 +129,30 @@
                             <constraint firstItem="QJD-je-q36" firstAttribute="trailing" secondItem="dqd-hs-JeK" secondAttribute="trailing" id="zGX-N6-GFz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="kPD-G9-CUm"/>
                     <connections>
                         <outlet property="mapView" destination="QJD-je-q36" id="kws-ox-45Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1428" y="-119"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="6kb-XP-fgx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8dz-53-fEW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="zzf-9g-H0M">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wxt-sJ-xxe"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ngg-Uj-X5D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="616" y="-119"/>
         </scene>

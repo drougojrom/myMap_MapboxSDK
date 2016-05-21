@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		300631AF1CF0B5C000E2A081 /* ChooseLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300631AE1CF0B5C000E2A081 /* ChooseLocationViewController.swift */; };
 		302D49C11CEC4CC1004345D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302D49C01CEC4CC1004345D4 /* AppDelegate.swift */; };
 		302D49C31CEC4CC1004345D4 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 302D49C21CEC4CC1004345D4 /* MapViewController.swift */; };
 		302D49C61CEC4CC1004345D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 302D49C41CEC4CC1004345D4 /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		300631AE1CF0B5C000E2A081 /* ChooseLocationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLocationViewController.swift; sourceTree = "<group>"; };
 		302D49BD1CEC4CC1004345D4 /* myMap_MapBoxSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myMap_MapBoxSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		302D49C01CEC4CC1004345D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		302D49C21CEC4CC1004345D4 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +65,9 @@
 			children = (
 				302D49C01CEC4CC1004345D4 /* AppDelegate.swift */,
 				302D49C21CEC4CC1004345D4 /* MapViewController.swift */,
-				302D49C41CEC4CC1004345D4 /* Main.storyboard */,
+				300631AE1CF0B5C000E2A081 /* ChooseLocationViewController.swift */,
 				302D49C71CEC4CC1004345D4 /* Assets.xcassets */,
+				302D49C41CEC4CC1004345D4 /* Main.storyboard */,
 				302D49C91CEC4CC1004345D4 /* LaunchScreen.storyboard */,
 				302D49CC1CEC4CC1004345D4 /* Info.plist */,
 			);
@@ -213,6 +216,7 @@
 			files = (
 				302D49C31CEC4CC1004345D4 /* MapViewController.swift in Sources */,
 				302D49C11CEC4CC1004345D4 /* AppDelegate.swift in Sources */,
+				300631AF1CF0B5C000E2A081 /* ChooseLocationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

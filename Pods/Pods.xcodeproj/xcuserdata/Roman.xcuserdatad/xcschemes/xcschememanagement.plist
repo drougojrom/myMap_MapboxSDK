@@ -4,7 +4,27 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MapboxDirections.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MapboxGeocoder.swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>NBNRequestKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-myMap_MapBoxSDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Polyline.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -12,7 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>092BD46DC0BE749AA7978958480B0D4E</key>
+		<key>3D9C3AB2E3FA874BB4666C16938E6EAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5A4791D60F51FC7FEAD26C17E7EFC2A4</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5E7C00D84F147A9BE0FE2210605CB66E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7D25EDE4DA396F11FF0BCBE63119C049</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BFD559F87E9C00E8E08707EBFC4D1D3B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

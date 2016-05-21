@@ -1,12 +1,48 @@
 PODS:
   - Mapbox-iOS-SDK (3.2.2)
+  - MapboxDirections.swift (0.4.0):
+    - NBNRequestKit
+    - Polyline (~> 3.0)
+  - MapboxGeocoder.swift (0.4.0):
+    - NBNRequestKit
+  - NBNRequestKit (0.3.0)
+  - Polyline (3.0.0)
 
 DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 3.2.2)
+  - MapboxDirections.swift (from `https://github.com/mapbox/MapboxDirections.swift.git`, tag `v0.5.0`)
+  - MapboxGeocoder.swift (from `https://github.com/mapbox/MapboxGeocoder.swift.git`, tag `v0.4.2`)
+  - NBNRequestKit (from `https://github.com/1ec5/RequestKit.git`, branch `mapbox-podspec`)
+
+EXTERNAL SOURCES:
+  MapboxDirections.swift:
+    :git: https://github.com/mapbox/MapboxDirections.swift.git
+    :tag: v0.5.0
+  MapboxGeocoder.swift:
+    :git: https://github.com/mapbox/MapboxGeocoder.swift.git
+    :tag: v0.4.2
+  NBNRequestKit:
+    :branch: mapbox-podspec
+    :git: https://github.com/1ec5/RequestKit.git
+
+CHECKOUT OPTIONS:
+  MapboxDirections.swift:
+    :git: https://github.com/mapbox/MapboxDirections.swift.git
+    :tag: v0.5.0
+  MapboxGeocoder.swift:
+    :git: https://github.com/mapbox/MapboxGeocoder.swift.git
+    :tag: v0.4.2
+  NBNRequestKit:
+    :commit: 77220407aa576e70232e4300a01d31870345b275
+    :git: https://github.com/1ec5/RequestKit.git
 
 SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 117ba1b0ed31107d3fe5826878a0f1531775aedc
+  MapboxDirections.swift: baa69039463d0853ec7cca2370ed686f507695bf
+  MapboxGeocoder.swift: de6083cfbac7a4e6bb6696fd1c4c4dfc04f18a30
+  NBNRequestKit: 300c68172965d586ac6e0cefbe5a4fe415b71dbf
+  Polyline: 18026fd6675f754a15e70b4fd7ca01d0d156b6d7
 
-PODFILE CHECKSUM: 0b36281b4e96f40b5e64bb896823a533680b1f1e
+PODFILE CHECKSUM: 55f956085e88bfd3c5f6153e0da5b9066d7331cd
 
 COCOAPODS: 1.0.0
