@@ -94,15 +94,6 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="showsUserLocation" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="latitude">
-                                        <real key="value" value="55.760278"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="longitude">
-                                        <real key="value" value="37.618611000000001"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="zoomLevel">
-                                        <real key="value" value="14"/>
-                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="Ocb-zN-qCR"/>
@@ -129,7 +120,18 @@
                             <constraint firstItem="QJD-je-q36" firstAttribute="trailing" secondItem="dqd-hs-JeK" secondAttribute="trailing" id="zGX-N6-GFz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="kPD-G9-CUm"/>
+                    <navigationItem key="navigationItem" id="kPD-G9-CUm">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="ynm-Mb-iMo">
+                            <connections>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="rMb-et-47Y"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Route" id="7Sr-4v-tEY">
+                            <connections>
+                                <action selector="drawRoute:" destination="BYZ-38-t0r" id="ngt-e4-2zL"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="QJD-je-q36" id="kws-ox-45Y"/>
                     </connections>
